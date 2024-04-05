@@ -69,3 +69,14 @@ if not jogo_ativo:
 
     for evento in pygame.event.get():
         if evento.type == pygame.KEYDOWN:
+        if evento.key == pygame.K_r:
+            jogo_ativo = True
+            personagem_posicao_x = largura_tela // 2 - personagem_imagem.get_width() // 2
+            personagem_posicao_y = altura_tela - personagem_imagem.get_height()
+            obstaculo_posicao_x = random.randint(0, largura_tela - obstaculo_imagem.get_width())
+            obstaculo_posicao_y = -obstaculo_imagem.get_height()
+    elif evento.key == pygame.K_q:
+        pygame.quit()
+        sys.exit()
+    
+            
